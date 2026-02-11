@@ -470,6 +470,80 @@ img {
   fill: #ffffff;
 }
 
+.footer-subscribe {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-subscribe-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #ffffff;
+
+  margin-bottom: 16px;
+}
+
+.footer-subscribe-form {
+  display: flex;
+  gap: 24px;
+}
+.footer-subscribe-input {
+  width: 264px;
+  height: 40px;
+
+  padding-left: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  background-color: transparent;
+
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+
+  color: #ffffff;
+}
+.footer-subscribe-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-subscribe-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  min-width: 165px;
+  height: 40px;
+  padding: 0 24px;
+
+  background-color: #4d5ae5;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 4px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-subscribe-button:hover,
+.footer-subscribe-button:focus {
+  background-color: #404bbf;
+}
+.footer-subscribe-icon {
+  fill: currentColor;
+}
+
 /* form stilleri burada baslar*/
 
 /* ===== MODAL & FORM STYLES ===== */
@@ -648,14 +722,43 @@ img {
   margin-bottom: 24px;
 }
 
-.checkbox-input {
+.custom-checkbox {
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid #2e2f42;
+  border-radius: 2px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   margin-right: 8px;
+
+  color: #f4f4fd;
+}
+.custom-checkbox svg {
+  opacity: 0;
+}
+
+.checkbox-input:checked + .checkbox-label .custom-checkbox {
+  background-color: #4d5ae5;
+  border: none;
+}
+
+.checkbox-input:checked + .checkbox-label .custom-checkbox svg {
+  opacity: 1;
 }
 
 .checkbox-label {
+  display: flex;
+  align-items: center;
+
   font-size: 12px;
   line-height: 16px;
   color: #8e8f99;
+
+  cursor: pointer;
 }
 
 .privacy-link {
